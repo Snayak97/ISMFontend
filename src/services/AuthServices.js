@@ -26,7 +26,7 @@ export const sendVerificationMail = async (email) => {
 
 export const sendForgotMail = async ({ email }) => {
   try {
-    const res = await Axios.post(`${config.USER_URL}/forgot-password`, {
+    const res = await Axios.post(`${config.AUTH_URL}/forgot-password`, {
       email,
     });
     return res.data;
@@ -92,3 +92,33 @@ export const logOutUser = async () => {
   }
 };
 
+
+export const updateUserProfile = async (userId, formData) => {
+  try {
+
+    const res = await Axios.put(
+      `${config.USER_URL}/update_user/${userId}`,
+      formData
+    );
+
+    const {user,message} = res.data;
+
+
+    localStorage.setItem("user", JSON.stringify(user));
+
+    return {user,message};
+  } catch (error) {
+    const message = error.response?.data?.error || error.message;
+    throw new Error(message);
+  }
+};
+
+export const changePassword = async (formData) => {
+  try {
+    const res = await Axios.post(`${config.AUTH_URL}/change_password`, formData);
+    return { message: res.data.message };
+  } catch (error) {
+    const message = error.response?.data?.error || error.message;
+    throw new Error(message);
+  }
+};

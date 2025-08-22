@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import LogOut from "../../pages/auth/LogOut/LogOut";
+import { Link } from "react-router-dom";
 
 const fallbackAvatar =
   "https://images.pexels.com/photos/941693/pexels-photo-941693.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
@@ -42,22 +43,19 @@ const UserMenu = ({ user }) => {
                   alt="Avatar"
                   className="w-10 h-10 rounded-full object-cover"
                 />
-                <span>{user?.username || "User"}</span>
+                <span>{user?.user_name || "User"}</span>
               </div>
             </div>
 
+            <Link to="/clientadmin/userProfiles">
             <button
               className="w-full text-left px-4 py-2 hover:bg-gray-100 text-sm"
-              onClick={() => console.log("View Profile")}
+              
             >
               View Profile
             </button>
-            <button
-              className="w-full text-left px-4 py-2 hover:bg-gray-100 text-sm"
-              onClick={() => console.log("Edit Profile")}
-            >
-              Edit Profile
-            </button>
+            </Link>
+          
             {/* <button
               className="w-full text-left px-4 py-2 hover:bg-red-100 text-red-600 text-sm"
               onClick={() => console.log("Logout")}

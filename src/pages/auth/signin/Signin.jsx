@@ -50,13 +50,19 @@ const Signin = () => {
       const accessToken = localStorage.getItem("access_token");
       let redirectTo = "";
 
-      if (data.user.role_name === "user") {
-        redirectTo = "/userpages";
-      } else if (data.user.role_name === "client_user") {
+      if (data.user.role_name === "normal_user") {
+        redirectTo = "/clientadmin/dashboard";
+      } else if (data.user.role_name === "manager") {
         if (data.force_reset_password) {
           redirectTo = `/forgot-password-verify/${accessToken}`;
         } else {
-          redirectTo = "/clientuserpages";
+          redirectTo = "/clientadmin/dashboard";
+        }
+      } else if (data.user.role_name === "employee") {
+        if (data.force_reset_password) {
+          redirectTo = `/forgot-password-verify/${accessToken}`;
+        } else {
+          redirectTo = "/clientadmin/dashboard";
         }
       } else if (data.user.role_name === "client_admin") {
         if (data.force_reset_password) {

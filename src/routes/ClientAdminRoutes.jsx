@@ -10,6 +10,9 @@ import SellingPlatformsMaster from "../pages/sellingpatformsMasterpages/SellingP
 import PlatformMaster from "../pages/platformMasterpags/PlatformMaster";
 import ShippingLocationsMaster from "../pages/shippinglocationMaster/ShippingLocationsMaster";
 import RequireAuth from "./protectRoute/RequiredAuth";
+import ClientUser from "../pages/clientuser/ClientUser";
+import UserManagement from "../pages/Superadminpages/allUsers/UserManagement";
+import UserProfiles from "../pages/userProfiles/UserProfiles"
 
 export const ClientAdminRoutes = (
   <Route
@@ -22,6 +25,9 @@ export const ClientAdminRoutes = (
     <Route path="/clientadmin/dashboard" element={<ClientAdmin />} />
     <Route path="/clientadmin/products" element={<Products />} />
     <Route path="/clientadmin/transaction" element={<Transaction />} />
+    <Route path="/clientadmin/users" element={<ClientUser/>} />
+    <Route path="/clientadmin/AllClientAndNormalUsers" element={<UserManagement/>} />
+    <Route path="/clientadmin/userProfiles" element={<UserProfiles/>} />
     <Route path="/clientadmin/uploadmasters" element={<UploadMasterData />} />
 
     {/* Master Data routes */}
@@ -31,5 +37,7 @@ export const ClientAdminRoutes = (
       <Route path="platforms-master" element={<PlatformMaster />} />
       <Route path="shipping-locations" element={<ShippingLocationsMaster />} />
     </Route>
+  
+  
   </Route>
 );
