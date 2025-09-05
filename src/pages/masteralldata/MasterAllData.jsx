@@ -90,7 +90,7 @@ const MasterAllData = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4">
+    <div className="min-h-screen bg-gray-50 p-4 dark:bg-neutral-900 dark:text-white">
       {/* Single line: Select left, title centered */}
       <div
         className="flex items-center mb-4"
@@ -100,7 +100,7 @@ const MasterAllData = () => {
         <select
           value={activeIndex}
           onChange={(e) => setActiveIndex(Number(e.target.value))}
-          className="border bg-white border-gray-300 rounded-md px-4 py-2 text-base
+          className="border dark:bg-neutral-900 dark:text-white bg-white border-gray-300 rounded-md px-4 py-2 text-base
             focus:outline-none  focus:ring-blue-500 transition "
           style={{ minWidth: 200 }}
         >

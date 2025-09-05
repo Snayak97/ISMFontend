@@ -20,14 +20,14 @@ const UserProfiles = () => {
 
   return (
     <div>
-      <div className="relative flex items-center bg-white shadow-md rounded-xl p-6 h-32 w-full mx-auto mt-10">
+      <div className="relative flex items-center bg-white shadow-md rounded-xl p-6 h-32 w-full mx-auto mt-10 border border-gray-200  dark:shadow-md dark:bg-neutral-900 dark:text-white hover:scale-101 transition transform duration-300 ease-in-out  dark:hover:border-gray-300 dark:hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.7)]">
         {/* Logout Button Top Right */}
         <button className="absolute top-3 right-3 flex cursor-pointer  rounded-lg shadow-md transition duration-300">
           <LogOut />
         </button>
 
         {/* Avatar */}
-        <div className="w-24 h-24 rounded-full overflow-hidden mb-3 flex flex-row">
+        <div className="w-24 h-24 rounded-full overflow-hidden mb-3 flex flex-row ">
           <img
             src={
               userData.avatar ||
@@ -40,10 +40,10 @@ const UserProfiles = () => {
 
         {/* User Info */}
         <div className="flex justify-center items-start flex-col gap-1 ml-5">
-          <h2 className="text-xl font-semibold text-gray-800">
+          <h2 className="text-xl font-semibold text-gray-800 dark:text-white">
             {userData.user_name}
           </h2>
-          <p className="text-gray-500">{userData.email}</p>
+          <p className="text-gray-500 dark:text-white">{userData.email}</p>
         </div>
       </div>
 

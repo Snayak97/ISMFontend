@@ -22,7 +22,7 @@ const Chart = ({ title }) => {
     <div
       aria-label={title}
       role="img"
-      className="h-96 md:h-[400px] flex flex-col shadow-md dark:shadow-lg p-4 sm:p-6 rounded-xl text-gray-600 dark:text-gray-200 bg-white dark:bg-neutral-900 w-full"
+      className="h-96 md:h-[400px] flex flex-col shadow-md dark:shadow-lg p-4 sm:p-6 rounded-xl text-gray-600 dark:text-gray-200 bg-white dark:bg-neutral-900 w-full hover:scale-102 transition transform duration-300 ease-in-out dark:hover:border-gray-300 dark:hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.7)] dark:border-1 dark:border-transparent"
     >
       <h2 className="text-base font-semibold mb-3">{title}</h2>
       <div className="flex-grow">

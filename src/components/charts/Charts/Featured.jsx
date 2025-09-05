@@ -5,7 +5,7 @@ import { FiMoreVertical, FiArrowDown, FiArrowUp } from "react-icons/fi";
 
 const Featured = () => {
   return (
-    <div className="flex-1 p-4 sm:p-6 shadow-md rounded-xl bg-white dark:bg-neutral-900 dark:text-white">
+    <div className="flex-1 p-4 sm:p-6 shadow-md rounded-xl bg-white dark:bg-neutral-900 dark:text-white hover:scale-102 transition transform duration-300 ease-in-out dark:hover:border-gray-300 dark:hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.7)] dark:border-1 dark:border-transparent">
       {/* Top */}
       <div className="flex items-center justify-between text-gray-500 dark:text-gray-300">
         <h1 className="text-base sm:text-lg font-medium">Total Revenue</h1>

@@ -10,8 +10,8 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex items-center gap-2 text-sm">
-      <FaGlobe className="text-xl text-gray-600" />
+    <div className="flex items-center gap-2 text-sm ">
+      <FaGlobe className="text-xl text-gray-600  dark:text-white dark:hover:text-yellow-200" />
       <select
         onChange={(e) => changeLanguage(e.target.value)}
         value={i18n.language}

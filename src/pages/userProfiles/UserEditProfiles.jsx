@@ -53,9 +53,9 @@ const UserEditProfiles = ({ user, setUserData }) => {
   if (!user) return <p>Loading...</p>;
 
   return (
-    <div className="mx-auto mt-10 p-6 bg-white shadow-lg rounded-xl relative">
+    <div className="mx-auto mt-10 p-6 bg-white shadow-lg rounded-xl relative border border-gray-200  dark:shadow-md dark:bg-neutral-900 dark:text-white hover:scale-101 transition transform duration-300 ease-in-out  dark:hover:border-gray-300 dark:hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.7)]">
       {/* Edit / Cancel + Save buttons */}
-      <div className="absolute top-4 right-4 flex gap-2">
+      <div className="absolute top-4 right-4 flex gap-2 ">
         {!isEditing ? (
           <button
             onClick={handleEditToggle}
@@ -84,10 +84,10 @@ const UserEditProfiles = ({ user, setUserData }) => {
       </div>
 
       {/* First Row: Editable fields */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
         {/* Name */}
         <div className="flex flex-col">
-          <label className="text-gray-700 font-medium mb-1">Name</label>
+          <label className="text-gray-700 font-medium mb-1 dark:text-white">Name</label>
           {isEditing ? (
             <input
               type="text"
@@ -95,16 +95,16 @@ const UserEditProfiles = ({ user, setUserData }) => {
               value={formData.user_name}
               onChange={handleChange}
               placeholder="Enter name"
-              className="border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              className="border rounded-md w-58 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
             />
           ) : (
-            <p className="text-gray-800">{user.user_name}</p>
+            <p className="text-gray-800 dark:text-gray-200">{user.user_name}</p>
           )}
         </div>
 
         {/* Email */}
         <div className="flex flex-col">
-          <label className="text-gray-700 font-medium mb-1">Email</label>
+          <label className="text-gray-700 font-medium mb-1 dark:text-white">Email</label>
           {isEditing ? (
             <input
               type="email"
@@ -112,16 +112,17 @@ const UserEditProfiles = ({ user, setUserData }) => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter email"
-              className="border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              disabled={!!isEditing}
+              // className="border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
             />
           ) : (
-            <p className="text-gray-800">{user.email}</p>
+            <p className="text-gray-800 dark:text-gray-200">{user.email}</p>
           )}
         </div>
 
         {/* Mobile */}
         <div className="flex flex-col">
-          <label className="text-gray-700 font-medium mb-1">Mobile</label>
+          <label className="text-gray-700 font-medium mb-1 dark:text-white">Mobile</label>
           {isEditing ? (
             <input
               type="text"
@@ -129,27 +130,27 @@ const UserEditProfiles = ({ user, setUserData }) => {
               value={formData.mobile_number}
               onChange={handleChange}
               placeholder="Enter mobile"
-              className="border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              className="border rounded-md px-4 w-58 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
             />
           ) : (
-            <p className="text-gray-800">{user.mobile_number || "N/A"}</p>
+            <p className="text-gray-800 dark:text-gray-200">{user.mobile_number || "N/A"}</p>
           )}
         </div>
       </div>
 
       {/* Second Row: Non-editable fields */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 ">
         <div className="flex flex-col">
-          <label className="text-gray-700 font-medium mb-1">Role Name</label>
-          <p className="text-gray-800">{user.role_name || "N/A"}</p>
+          <label className="text-gray-700 font-medium mb-1 dark:text-white">Role Name</label>
+          <p className="text-gray-800 dark:text-gray-200">{user.role_name || "N/A"}</p>
         </div>
         <div className="flex flex-col">
-          <label className="text-gray-700 font-medium mb-1">Activate</label>
-          <p className="text-gray-800">{user.is_active ? "Yes" : "No"}</p>
+          <label className="text-gray-700 font-medium mb-1 dark:text-white">Activate</label>
+          <p className="text-gray-800 dark:text-gray-200">{user.is_active ? "Yes" : "No"}</p>
         </div>
         <div className="flex flex-col">
-          <label className="text-gray-700 font-medium mb-1">Verified</label>
-          <p className="text-gray-800">{user.is_verified ? "Yes" : "No"}</p>
+          <label className="text-gray-700 font-medium mb-1 dark:text-white">Verified</label>
+          <p className="text-gray-800 dark:text-gray-200">{user.is_verified ? "Yes" : "No"}</p>
         </div>
       </div>
     </div>

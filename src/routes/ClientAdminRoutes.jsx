@@ -13,6 +13,7 @@ import RequireAuth from "./protectRoute/RequiredAuth";
 import ClientUser from "../pages/clientuser/ClientUser";
 import UserManagement from "../pages/Superadminpages/allUsers/UserManagement";
 import UserProfiles from "../pages/userProfiles/UserProfiles"
+import PermissionPage from "../pages/auth/permisions/PermissionPage";
 
 export const ClientAdminRoutes = (
   <Route
@@ -27,6 +28,7 @@ export const ClientAdminRoutes = (
     <Route path="/clientadmin/transaction" element={<Transaction />} />
     <Route path="/clientadmin/users" element={<ClientUser/>} />
     <Route path="/clientadmin/AllClientAndNormalUsers" element={<UserManagement/>} />
+    <Route path="/clientadmin/Permission" element={<PermissionPage/>} />
     <Route path="/clientadmin/userProfiles" element={<UserProfiles/>} />
     <Route path="/clientadmin/uploadmasters" element={<UploadMasterData />} />
 

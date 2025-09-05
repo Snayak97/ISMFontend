@@ -51,7 +51,7 @@ const ChangePasswords = () => {
   };
 
   return (
-    <form onSubmit={handleChangePassword} className="p-6 bg-gradient-to-r from-green-50 to-green-100 shadow-xl rounded-2xl border border-green-200">
+    <form onSubmit={handleChangePassword} className="p-6 bg-gradient-to-r from-green-50 to-green-100 shadow-xl rounded-2xl border border-green-200 dark:shadow-md dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-900 dark:text-white hover:scale-101 transition transform duration-300 ease-in-out  dark:hover:border-gray-300 dark:hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.7)]">
       <h3 className="text-xl font-semibold mb-6 text-green-700 text-center">
         Change Password
       </h3>
@@ -116,7 +116,7 @@ const ChangePasswords = () => {
       <button
         type="submit"
         disabled={loading}
-        className={`w-full ${loading ? "bg-green-400" : "bg-green-500 hover:bg-green-600"} text-white font-semibold px-4 py-2 rounded-lg shadow-md transition duration-300`}
+        className={`w-full ${loading ? "bg-green-400" : "bg-green-500 hover:bg-green-600"} text-white font-semibold px-4 py-2 rounded-lg shadow-md transition duration-300 cursor-pointer`}
       >
         {loading ? "Updating..." : "Change Password"}
       </button>

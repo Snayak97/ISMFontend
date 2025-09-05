@@ -66,9 +66,9 @@ const RecoveryPasswords = () => {
   return (
     <>
    
-      <div className="p-6 bg-gradient-to-r from-blue-50 to-blue-100 shadow-xl rounded-2xl border border-blue-200">
+      <div className="p-6 bg-gradient-to-r from-blue-50 to-blue-100 shadow-xl rounded-2xl border border-blue-200 dark:shadow-md dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-900 dark:text-white hover:scale-101 transition transform duration-300 ease-in-out  dark:hover:border-gray-300 dark:hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.7)]">
         <h3 className="text-xl font-semibold mb-6 text-blue-700 text-center">
-          Recovery Password
+          Recovery Password Email
         </h3>
 
         {/* Success & Server Error */}
@@ -84,8 +84,8 @@ const RecoveryPasswords = () => {
         )}
 
         {/* Recovery Form */}
-        <form onSubmit={handleRecoverySubmit} className="space-y-4">
-          <div className="flex items-center mb-3 bg-white rounded-lg shadow-sm border border-gray-200 px-3 py-2">
+        <form onSubmit={handleRecoverySubmit} className="space-y-4 ">
+          <div className="flex items-center mb-3 bg-white rounded-lg shadow-sm border border-gray-200 px-3 py-2 ">
             <FiMail className="text-gray-400 mr-2 text-lg" />
             <input
               type="email"
@@ -103,13 +103,13 @@ const RecoveryPasswords = () => {
           </div>
           {emailError && <p className="text-red-500 text-sm">{emailError}</p>}
 
-          <button
+          {/* <button
             type="submit"
             disabled={recoveryLoading}
-            className="w-full bg-blue-500 mt-3 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition duration-300"
+            className="w-full bg-blue-500 mt-3 cursor-pointer hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition duration-300"
           >
             {recoveryLoading ? "Sending..." : "Send Recovery Email"}
-          </button>
+          </button> */}
         </form>
       </div>
     </>

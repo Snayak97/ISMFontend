@@ -5,3 +5,8 @@
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+
+.dark .MuiTab-root {
+  color: white !important;
+}

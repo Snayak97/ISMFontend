@@ -75,7 +75,7 @@ const Widget = ({ type }) => {
   }
 
   return (
-    <div className="flex flex-1 justify-between p-4 shadow-md rounded-lg h-24 md:h-28 bg-white dark:bg-neutral-900 dark:text-white">
+    <div className="flex flex-1 justify-between p-4 shadow-md rounded-lg h-24 md:h-28 bg-white dark:bg-neutral-900 dark:text-white dark:border-1 dark:border-transparent dark:hover:border-gray-300 dark:hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.7)] transition-all duration-300 hover:scale-102 transform  ease-in-out">
       <div className="flex flex-col justify-between">
         <span className="text-sm md:text-base font-semibold text-gray-500 dark:text-gray-400">
           {data.title}

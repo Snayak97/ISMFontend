@@ -122,3 +122,13 @@ export const changePassword = async (formData) => {
     throw new Error(message);
   }
 };
+
+export const deleteNormalUser = async (user_id) => {
+  try {
+    const res = await Axios.delete(`${config.USER_URL}/delete_user/${user_id}`);
+    return res.data;
+  } catch (error) {
+    const message = error.response?.data?.error || error.message;
+    throw new Error(message);
+  }
+};
